@@ -11,6 +11,7 @@
 
   .menu-icon {
     align-self: center;
+		transition: all .5s;
   }
 
   .menu-icon i {
@@ -24,7 +25,7 @@
 
 	.header > img {
 	padding: 2px;
-	width: 188px;
+	width: 200px;
   box-sizing: content-box;
 	}
 
@@ -62,13 +63,15 @@
   }
 
   .searching ~ .search-form {
-    transform: translateY(-50px);
+    transform: translateY(-70px);
     opacity: 1;
   }
 
-  .searching .header, & .searching .menu {
+  .searching  {
+		.header, .menu, .menu-icon {
     transform: translateY(100px);
     opacity: 0;
+		}
   }
 }
 
@@ -88,7 +91,7 @@
     }
 
     .content {
-      justify-content: space-between; 
+      justify-content: space-between;
     }
 
     .content .menu {
@@ -98,5 +101,10 @@
     .search-icon {
       flex-grow: 0;
     }
+
+		.searching ~ .search-form {
+	    transform: translateY(-38px);
+	    opacity: 1;
+	  }
   }
 }
